@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fcd34d"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo circular con gradiente corporativo -->
+  <circle cx="200" cy="200" r="195" fill="url(#bgGrad)"/>
+  <!-- Círculo interior suave decorativo -->
+  <circle cx="200" cy="200" r="180" fill="#ffffff" opacity="0.08"/>
+
+  <!-- Cuerpo / Ropa / Sudadera de desarrollador -->
+  <path d="M 90 380 Q 90 280 200 280 Q 310 280 310 380 Z" fill="url(#shirtGrad)"/>
+  <path d="M 160 280 L 200 330 L 240 280 Z" fill="#3b82f6" opacity="0.4"/>
+  <path d="M 175 280 L 200 310 L 225 280 Z" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Cuello -->
+  <rect x="175" y="220" width="50" height="65" rx="10" fill="url(#skinGrad)"/>
+
+  <!-- Cabeza y rostro -->
+  <ellipse cx="200" cy="180" rx="65" ry="75" fill="url(#skinGrad)"/>
+
+  <!-- Cabello moderno -->
+  <path d="M 135 170 Q 135 105 200 100 Q 265 105 265 170 C 265 130 240 115 200 115 C 160 115 135 140 135 170 Z" fill="#1e293b"/>
+  <path d="M 140 145 Q 170 120 225 125 Q 260 130 265 155 Q 255 135 220 132 Q 175 130 140 145 Z" fill="#0f172a"/>
+
+  <!-- Gafas modernas de montura oscura -->
+  <!-- Lente izquierda -->
+  <rect x="155" y="165" width="38" height="26" rx="8" fill="none" stroke="#0f172a" stroke-width="5"/>
+  <rect x="158" y="168" width="32" height="20" rx="5" fill="#38bdf8" opacity="0.25"/>
+  <!-- Lente derecha -->
+  <rect x="207" y="165" width="38" height="26" rx="8" fill="none" stroke="#0f172a" stroke-width="5"/>
+  <rect x="210" y="168" width="32" height="20" rx="5" fill="#38bdf8" opacity="0.25"/>
+  <!-- Puente y patillas -->
+  <line x1="193" y1="175" x2="207" y2="175" stroke="#0f172a" stroke-width="4"/>
+  <line x1="145" y1="173" x2="155" y2="173" stroke="#0f172a" stroke-width="4"/>
+  <line x1="245" y1="173" x2="255" y2="173" stroke="#0f172a" stroke-width="4"/>
+
+  <!-- Ojos detrás de las lentes -->
+  <circle cx="174" cy="177" r="4" fill="#0f172a"/>
+  <circle cx="226" cy="177" r="4" fill="#0f172a"/>
+
+  <!-- Sonrisa profesional -->
+  <path d="M 183 220 Q 200 232 217 220" fill="none" stroke="#9a3412" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Auriculares / Headset sutil de dev -->
+  <path d="M 132 170 Q 130 140 150 120" fill="none" stroke="#64748b" stroke-width="6" stroke-linecap="round"/>
+  <rect x="127" y="165" width="10" height="25" rx="4" fill="#475569"/>
+
+  <!-- Insignia de código / terminal en el lateral -->
+  <g transform="translate(290, 290)">
+    <circle cx="35" cy="35" r="35" fill="#0f172a" stroke="#3b82f6" stroke-width="3"/>
+    <text x="35" y="44" font-family="Courier New, monospace" font-size="24" font-weight="bold" fill="#38bdf8" text-anchor="middle">&lt;/&gt;</text>
+  </g>
+</svg>
