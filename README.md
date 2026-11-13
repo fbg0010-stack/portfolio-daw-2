@@ -7,7 +7,7 @@ Portfolio que estoy haciendo para el ciclo de Desarrollo de Aplicaciones Web.
 - GitHub Pages: https://fbg0010-stack.github.io/portfolio-daw-2/
 - Repositorio: https://github.com/fbg0010-stack/portfolio-daw-2
 
-Para publicar la página, activa GitHub Pages en Settings → Pages y elige `main` y `(root)`.
+La página se publica desde la rama `main` y la carpeta `(root)` con GitHub Pages.
 
 ## Qué he usado
 
