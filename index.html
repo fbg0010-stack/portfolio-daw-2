@@ -59,9 +59,9 @@
               <a href="#proyectos" class="btn btn-primary">
                 Ver proyectos
               </a>
-              <span class="btn btn-outline-secondary disabled" aria-disabled="true">
-                CV pendiente
-              </span>
+              <a href="docs/cv.pdf" class="btn btn-outline-primary" download>
+                <i class="bi bi-download me-1" aria-hidden="true"></i>Descargar CV
+              </a>
             </div>
           </div>
           <div class="col-12 col-lg-5 text-center">
@@ -183,6 +183,13 @@
                   <i class="bi bi-github me-1" aria-hidden="true"></i>Repositorio y pasos para ejecutar
                 </a>
                 <p class="small text-body-secondary mt-2 mb-0">Demo local; requiere Docker Compose.</p>
+                <button class="btn btn-link px-0 mt-2 align-self-start" type="button"
+                  data-bs-toggle="modal" data-bs-target="#modalProyecto"
+                  data-proyecto="Práctica de Docker y PHP"
+                  data-descripcion="Aplicación PHP desplegada con Docker Compose, Nginx y PHP-FPM. Comprueba la conexión con MySQL y muestra el estado de la infraestructura."
+                  data-tecnologias="PHP, MySQL, Docker Compose y Nginx">
+                  Ver detalle del proyecto
+                </button>
               </div>
             </article>
           </div>
@@ -213,6 +220,24 @@
         </div>
       </div>
     </section>
+
+    <div class="modal fade" id="modalProyecto" tabindex="-1" aria-labelledby="modalProyectoTitulo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="modalProyectoTitulo">Detalle del proyecto</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar detalle"></button>
+          </div>
+          <div class="modal-body">
+            <p id="modalProyectoDescripcion"></p>
+            <p class="mb-0"><strong>Tecnologías:</strong> <span id="modalProyectoTecnologias"></span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section id="formacion" class="py-5 bg-seccion-alterna border-top border-bottom">
       <div class="container">
@@ -268,29 +293,40 @@
               <div class="card-body">
                 <h3 class="h5">Envíame un mensaje</h3>
                 <p class="small text-body-secondary">Formulario maquetado para esta entrega; el envío se añadirá en la siguiente.</p>
-                <form>
+                <form id="formulario-contacto" class="needs-validation" novalidate>
                   <div class="row g-3">
                     <div class="col-12 col-sm-6">
                       <label for="contacto-nombre" class="form-label">Nombre</label>
-                      <input type="text" class="form-control" id="contacto-nombre" name="nombre" autocomplete="name">
+                      <input type="text" class="form-control" id="contacto-nombre" name="nombre"
+                        autocomplete="name" minlength="2" required>
+                      <div class="invalid-feedback">Escribe tu nombre (al menos 2 caracteres).</div>
                     </div>
                     <div class="col-12 col-sm-6">
                       <label for="contacto-email" class="form-label">Correo electrónico</label>
-                      <input type="email" class="form-control" id="contacto-email" name="email" autocomplete="email">
+                      <input type="email" class="form-control" id="contacto-email" name="email"
+                        autocomplete="email" required>
+                      <div class="invalid-feedback">Introduce un correo válido.</div>
                     </div>
                     <div class="col-12">
                       <label for="contacto-asunto" class="form-label">Asunto</label>
-                      <input type="text" class="form-control" id="contacto-asunto" name="asunto">
+                      <input type="text" class="form-control" id="contacto-asunto" name="asunto"
+                        autocomplete="off" minlength="3" required>
+                      <div class="invalid-feedback">Indica un asunto de al menos 3 caracteres.</div>
                     </div>
                     <div class="col-12">
                       <label for="contacto-mensaje" class="form-label">Mensaje</label>
-                      <textarea class="form-control" id="contacto-mensaje" name="mensaje" rows="4"></textarea>
+                      <textarea class="form-control" id="contacto-mensaje" name="mensaje"
+                        autocomplete="off" minlength="10" rows="4" required></textarea>
+                      <div class="invalid-feedback">Escribe un mensaje de al menos 10 caracteres.</div>
                     </div>
                     <div class="col-12">
-                      <button type="button" class="btn btn-primary" disabled>Envío pendiente para la siguiente entrega</button>
+                      <button type="submit" class="btn btn-primary">Comprobar y preparar mensaje</button>
                     </div>
                   </div>
                 </form>
+                <div id="formulario-ok" class="alert alert-success mt-3 d-none" role="status">
+                  Todos los campos son válidos. El mensaje está preparado para enviarse por el canal configurado.
+                </div>
               </div>
             </div>
           </div>
@@ -315,7 +351,7 @@
         </a>
       </div>
       <p class="mb-1 text-body-secondary">&copy; <span id="copyright-year">2026</span> Francis · Estudiante de DAW</p>
-      <p class="small text-body-secondary mb-0">Última actualización: 13 de noviembre de 2026</p>
+      <p class="small text-body-secondary mb-0">Última actualización: 17 de noviembre de 2026</p>
     </div>
   </footer>
 
